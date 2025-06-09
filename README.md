@@ -1,2 +1,2 @@
 # simple-notes
-AI-powered note-taking app with secure JWT authentication and Gemini integration to generate and edit notes from prompts
+Simple Notes is a full-stack AI-enhanced note-taking app built with the MERN stack. It features user authentication using JWT, and integrates Google’s Gemini API to allow users to create and edit notes using natural language prompts. The frontend is styled with Tailwind CSS and DaisyUI for a responsive, modern UI, while the backend handles secure user sessions and stores notes in MongoDB. This project demonstrates full authentication flow, protected routes, prompt-based content generation, and Markdown rendering.
