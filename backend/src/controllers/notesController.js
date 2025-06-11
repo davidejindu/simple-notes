@@ -3,7 +3,9 @@ import Note from "../models/Note.js";
 // Get all notes for the authenticated user
 export const getAllNotes = async (req, res) => {
   try {
+    console.log("User ID from token:", req.user.id);
     const notes = await Note.find({ user: req.user.id }).sort({ createdAt: -1 });
+    console.log("Found notes:", notes.length);
     res.status(200).json(notes);
   } catch (error) {
     console.error("Error in getAllNotes controller", error);
