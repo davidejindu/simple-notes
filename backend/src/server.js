@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5001;
 
 
 app.use(cors({
-  origin: process.env.CLIENT_URL,
+  origin: "https://simple-notes-two-nu.vercel.app",
   credentials: true,
 }));
 
