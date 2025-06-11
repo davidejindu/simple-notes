@@ -46,6 +46,7 @@ export const loginUser = async (req, res) => {
       { expiresIn: process.env.JWT_EXPIRES_IN }
     );
 
+    // Set cookie (for same-origin requests)
     res.cookie("token", token, {
       httpOnly: true,
       secure: true,
@@ -53,7 +54,12 @@ export const loginUser = async (req, res) => {
       maxAge: 365 * 24 * 60 * 60 * 1000, 
     });
 
-    res.status(200).json({ message: "Login successful", user: { id: user._id, username: user.username } });
+    // ALSO return token in response (for cross-origin requests)
+    res.status(200).json({ 
+      message: "Login successful", 
+      user: { id: user._id, username: user.username },
+      token: token // Add this line
+    });
 
   } catch (err) {
     console.error("Login error:", err);
