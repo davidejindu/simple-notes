@@ -14,7 +14,7 @@ router.post('/login', loginUser);
 router.post('/logout', (req, res) => {
   res.clearCookie('token', {
     httpOnly: true,  // Cookie can’t be accessed from JS
-    secure: process.env.NODE_ENV === 'production', // Only use secure in production
+    secure: true,
     sameSite: 'None',
   });
   res.status(200).json({ message: 'Logged out successfully' });
