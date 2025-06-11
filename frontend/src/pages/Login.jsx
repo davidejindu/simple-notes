@@ -16,14 +16,20 @@ const Login = () => {
       toast.error("Both fields are required");
       return;
     }
-
+  
     setLoading(true);
     try {
-      const res = await api.post('/users/login', {
+      const response = await api.post('/users/login', {
         username,
         password
-      }, { withCredentials: true });
-
+      });
+  
+      // Store the token
+      if (response.data.token) {
+        localStorage.setItem('token', response.data.token);
+        console.log('Token stored successfully');
+      }
+  
       toast.success("Login successful!");
       navigate('/home');
     } catch (error) {
@@ -33,6 +39,7 @@ const Login = () => {
       setLoading(false);
     }
   };
+  
 
   return (
     <>
