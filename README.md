@@ -5,7 +5,7 @@ An AI-powered note-taking app that lets users create, edit, and save notes — m
 
 ## 🚀 Demo
 
-Frontend: [Live on Vercel](https://simple-notes-lq6329lhr-david-ejindus-projects.vercel.app)  
+Frontend: [Live on Vercel](simple-notes-two-nu.vercel.app)  
 Backend: [Live on Render](https://simple-notes-thf3.onrender.com)
 
 ---
