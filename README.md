@@ -7,6 +7,7 @@ An AI-powered note-taking app that lets users create, edit, and save notes — m
 
 Frontend: [Live on Vercel](simple-notes-two-nu.vercel.app)  
 Backend: [Live on Render](https://simple-notes-thf3.onrender.com)
+
 ⚠️ Note: The backend is hosted on Render’s free tier. It may take 20–30 seconds to respond if it has been idle (cold start). Please be patient on first load.
 
 ---
